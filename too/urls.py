@@ -25,6 +25,5 @@ urlpatterns = [
     url(r'^network/$', view.network,name='network'),
     url(r'^blog/$', view.blog,name='blog'),
     url(r'^contact/$', view.contact,name='contact'),
-    url(r'^test/$', view.test,name='test'),
     url(r'^hello', view.hello),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
