@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>博客</title>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="icon" href="{% static "images/favicon.ico" %}">
+		<link rel="shortcut icon" href="{% static "images/favicon.ico" %}" />
+		<link rel="stylesheet" href="{% static "css/style.css" %}">
+		<link rel="stylesheet" href="{% static "css/main.css" %}">
+		<script src="{% static "js/jquery.js" %}"></script>
+		<script src="{% static "js/jquery-migrate-1.2.1.js" %}"></script>
+		<script src="{% static "js/script.js" %}"></script>
+		<script src="{% static "js/superfish.js" %}"></script>
+		<script src="{% static "js/jquery.ui.totop.js" %}"></script>
+		<script src="{% static "js/jquery.equalheights.js" %}"></script>
+		<script src="{% static "js/jquery.mobilemenu.js" %}"></script>
+		<script src="{% static "js/jquery.easing.1.3.js" %}"></script>
+		<script>
+		$(document).ready(function(){
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			});
+		</script>
+		<!--[if lt IE 8]>
+		<div style=' clear: both; text-align:center; position: relative;'>
+			<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+				<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+			</a>
+		</div>
+		<![endif]-->
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<link rel="stylesheet" media="screen" href="css/ie.css">
+		<![endif]-->
+	</head>
+	<body>
+<!--==============================header=================================-->
+		<header>
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="menu_block">
+						<nav class="horizontal-nav full-width horizontalNav-notprocessed">
+							<ul class="sf-menu">
+								<li><a href="/home">首页</a></li>
+								<li><a href="/album">画册</a></li>
+								<li><a href="/network">网络</a></li>
+								<li class="current"><a href="/blog">博客</a></li>
+								<li><a href="/contact">联系</a></li>
+							</ul>
+						</nav>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="grid_12">
+					<h1>
+						<a href="index.html">
+							<img src="images/logo1.png" alt="Your Happy Family">
+						</a>
+					</h1>
+				</div>
+			</div>
+		</header>
+<!--==============================Content=================================-->
+		<div class="content"><div class="ic">More Website Templates @ cssmoban.com - February 10, 2014!</div>
+			<div class="container_12">
+				<div class="grid_7">
+					<h3>最近的帖子</h3>
+					<div class="blog">
+						<time datetime="2014-04-06">星期<span>日</span></time>
+						<div class="extra_wrapper">
+							<div class="text1 col1"><a href="#">大教堂</a></div>由
+							<a href="#">Admin</a>更新
+						</div>
+						<div class="clear"></div>
+						<img src="{% static "images/page4_img1.jpg" %}" alt="" class="img_inner">
+						<p>关于大教堂1 </p>关于大教堂2
+						<br>
+						<a href="#" class="link1">查看更多星期日的内容</a>
+					</div>
+					<div class="blog">
+						<time datetime="2014-04-07">星期<span>一</span></time>
+						<div class="extra_wrapper">
+							<div class="text1 col1"><a href="#">豪华酒店</a></div>由
+							<a href="#">Admin</a>更新
+						</div>
+						<div class="clear"></div>
+						<img src="{% static "images/page4_img2.jpg" %}" alt="" class="img_inner">
+						<p>关于豪华酒店1 </p>关于豪华酒店2
+						<br>
+						<a href="#" class="link1">查看更多星期一的内容</a>
+					</div>
+				</div>
+				<div class="grid_3 prefix_1">
+					<h3 class="head1">热门新闻</h3>
+					<ul class="list">
+						<li><a href="#">新闻1 </a></li>
+						<li><a href="#">新闻2 </a></li>
+						<li><a href="#">新闻3 </a></li>
+						<li><a href="#">新闻4 </a></li>
+						<li><a href="#">新闻5 </a></li>
+						<li><a href="#">新闻6 </a></li>
+						<li><a href="#">新闻7 </a></li>
+						<li><a href="#">新闻8 </a></li>
+						<li><a href="#">新闻9 </a></li>
+						<li><a href="#">新闻10 </a></li>
+					</ul>
+					<h3 class="head1">广告</h3>
+					<ul class="list">
+						<li><a href="#">广告1</a></li>
+						<li><a href="#">广告2</a></li>
+						<li><a href="#">广告3</a></li>
+						<li><a href="#">广告4</a></li>
+						<li><a href="#">广告5</a></li>
+						<li><a href="#">广告6</a></li>
+						<li><a href="#">广告7</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+<!--==============================footer=================================-->
+		{% include "foot.html" %}
+	</body>
+</html>

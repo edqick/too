@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>网络新闻</title>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="icon" href="{% static "images/favicon.ico" %}">
+		<link rel="shortcut icon" href="{% static "images/favicon.ico" %}" />
+		<link rel="stylesheet" href="{% static "css/style.css" %}">
+		<link rel="stylesheet" href="{% static "css/main.css" %}">
+		<script src="{% static "js/jquery.js" %}"></script>
+		<script src="{% static "js/jquery-migrate-1.2.1.js" %}"></script>
+		<script src="{% static "js/script.js" %}"></script>
+		<script src="{% static "js/superfish.js" %}"></script>
+		<script src="{% static "js/jquery.ui.totop.js" %}"></script>
+		<script src="{% static "js/jquery.equalheights.js" %}"></script>
+		<script src="{% static "js/jquery.mobilemenu.js" %}"></script>
+		<script src="{% static "js/jquery.easing.1.3.js" %}"></script>
+		<script>
+		$(document).ready(function(){
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			});
+		</script>
+		<!--[if lt IE 8]>
+		<div style=' clear: both; text-align:center; position: relative;'>
+			<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+				<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+			</a>
+		</div>
+		<![endif]-->
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<link rel="stylesheet" media="screen" href="css/ie.css">
+		<![endif]-->
+	</head>
+	<body>
+<!--==============================header=================================-->
+		<header>
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="menu_block">
+						<nav class="horizontal-nav full-width horizontalNav-notprocessed">
+							<ul class="sf-menu">
+								<li><a href="/home">首页</a></li>
+								<li><a href="/album">画册</a></li>
+								<li class="current"><a href="/network">网络</a></li>
+								<li><a href="/blog">博客</a></li>
+								<li><a href="/contact">联系</a></li>
+							</ul>
+						</nav>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="grid_12">
+					<h1>
+						<a href="index.html">
+							<img src="images/logo1.png" alt="Your Happy Family">
+						</a>
+					</h1>
+				</div>
+			</div>
+		</header>
+<!--==============================Content=================================-->
+		<div class="content"><div class="ic">More Website Templates @ cssmoban.com - February 10, 2014!</div>
+			<div class="container_12">
+				<div class="grid_8">
+					<h3>热点新闻</h3>
+					<div class="block2">
+						<img src="{% static "images/page3_img1.jpg" %}" alt="" class="img_inner fleft">
+						<div class="extra_wrapper">
+							<div class="text1 col1"><a href="#">巴塞罗那</a></div>
+							<p>巴塞罗那（Barcelona）位于伊比利亚半岛东北部，濒临地中海，是西班牙第二大城市，在西班牙具有主要的经济地位。也是西班牙最重要的贸易、工业和金融基地。巴塞罗那港是地中海沿岸最大的港口和最大的集装箱集散码头，也是西班牙最大的综合性港口。
+也是加泰罗尼亚自治区首府、以及巴塞罗那省（隶属于加泰罗尼亚自治区）的省会，加泰罗尼亚自治区议会、行政机构、高等法院均设立于此。相传该城由迦太基将领哈米尔卡·巴卡所兴建，在其漫长的历史上还曾作为巴塞罗那伯爵领地和阿拉贡王国的都城。巴塞罗那因其众多历史建筑和文化景点成为众多旅游者的目的地。巴塞罗那素有“伊比利亚半岛的明珠”之称。
+这座城市的在其规划中融合了罗马风格的痕迹、中世纪风格的城区、极为漂亮的现代主义风格的及20世纪的先驱者的作品，因而成为一座世界性的城市。 <br><a href="http://baike.baidu.com/subview/2222/8423460.htm#viewPageContent" class="link1"><span class="low">搜索巴塞罗那</span></a>
+						</div>
+					</div>
+					<div class="block2">
+						<img src="{% static "images/page3_img2.jpg" %}" alt="" class="img_inner fleft">
+						<div class="extra_wrapper">
+							<div class="text1 col1"><a href="#">莫斯科</a></div>
+							<p>莫斯科（俄语：Москва），俄罗斯联邦首都，莫斯科州首府，全俄最大的城市和经济、文化、金融、交通中心为以及最大的综合性城市。莫斯科也是独联体最大的商业中心，俄罗斯最大的商业和金融业办事机构都设在这里。是世界著名古城，国际化大都市。
+俄罗斯乃至欧亚大陆上重要的交通枢纽。同时，莫斯科还是一个重要的工业制造业中心，莫斯科是全国科技文化中心，教育设施众多。
+莫斯科建城于1147年，迄今已有800余年的历史。莫斯科地处俄罗斯欧洲部分中部，跨莫斯科河及支流亚乌扎河两岸。莫斯科和伏尔加流域的上游入口和江河口处相通。莫斯科沿莫斯科河而建，从莫斯科大公时代开始，到沙皇俄国(1700年前)至苏联及俄罗斯联邦政权一直担任着国家首都的角色。
+莫斯科拥有众多名胜古迹，是历史悠久的克里姆林宫所在地。莫斯科城市规划优美，掩映在一片绿海之中，故有“森林中的首都”之美誉。 
+<br><a href="http://baike.baidu.com/subview/25155/5244324.htm?fromId=25155&from=rdtself&fr=wordsearch" class="link1"><span class="low">搜索莫斯科</span></a>
+						</div>
+					</div>
+					<div class="block2">
+						<img src="{% static "images/page3_img3.jpg" %}" alt="" class="img_inner fleft">
+						<div class="extra_wrapper">
+							<div class="text1 col1"><a href="#">曼谷</a></div>
+							<p>“曼谷”（Bangkok）,泰国首都，泰国最大城市，中南半岛最大城市，东南亚第二大城市，为泰国政治、经济、贸易、交通、文化、科技、教育、宗教与各方面中心。旅游业十分发达，被评选为2013全球最受欢迎旅游城市。曼谷被誉为是“佛教之都”。
+泰国的“佛教之都”，融合东西方文化、包罗万有的“天使之城”。
+曼谷是繁华的国际大都市，经济占全泰国经济总量的44%。
+泰国人称曼谷为“军贴”，意思是“天使之城”。将其泰文全称转为拉丁文字，长达167个字母，其意为：“天使之城、伟大的都市、玉佛的宿处、坚不可摧的城市、被赠予九块宝石的世界大都会、充满著像似统治转世神之天上住所的巍峨皇宫，一座由因陀罗给予、毗湿奴建造的大都会”。
+曼谷作为国际活动中心之一，每年有多达二、三百起的各种国际会议在此举行。城内设有联合国亚太经社委员会总部、世界银行、世界卫生组织、国际劳工组织以及20多个国际机构的区域办事处。曼谷还是世界佛教联谊会总部。另外，曼谷也是贵金属和宝石的交易中心。 
+	<br><a href="http://baike.baidu.com/view/21419.htm?fr=wordsearch" class="link1"><span class="low">搜索曼谷</span></a>
+		
+						</div>
+					</div>
+				</div>
+				<div class="grid_3 prefix_1">
+					<h5>最近更新</h5>
+					<ul class="list">
+						<li><a href="#">巴塞罗那</a></li>
+						<li><a href="#">莫斯科</a></li>
+						<li><a href="#">曼谷</a></li>
+						<li><a href="#">香港</a></li>
+						<li><a href="#">成都</a></li>
+					</ul>
+					<a href="#" class="link1"><span class="low">查看所有</span></a>
+					<h3 class="head1">广告</h3>
+					<ul class="list">
+						<li><a href="#">文字广告1</a></li>
+						<li><a href="#">文字广告2</a></li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+<!--==============================footer=================================-->
+		{% include "foot.html" %}
+	</body>
+</html>

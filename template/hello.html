@@ -1,0 +1,6 @@
+{% load static %}
+hello
+<p>{% with l=request.path %}
+<p>{{l}}
+{% endwith %}
+<p><img src="{% static "images/france_1.jpg" %}" alt="I'm Your's"/>

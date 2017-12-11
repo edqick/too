@@ -1,0 +1,17 @@
+﻿.page_content
+{
+position:absolute;
+left:50px;
+margin-bottom: 0cm;
+}
+
+footer {
+	display: block;
+    padding-top: 90px;
+    color: #a3afba;
+    font-family: 'Open Sans', sans-serif;
+}
+.copy{
+	margin-top: 0cm;
+	margin-left: -3cm;
+}

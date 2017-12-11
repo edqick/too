@@ -1,0 +1,174 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>画册</title>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="icon" href="{% static "images/favicon.ico" %}">
+		<link rel="shortcut icon" href="{% static "images/favicon.ico" %}"/>
+		<link rel="stylesheet" href="{% static "css/style.css" %}">
+		<link rel="stylesheet" href="{% static "css/main.css" %}">
+		<script src="{% static "js/jquery.js" %}"></script>
+		<script src="{% static "js/jquery-migrate-1.2.1.js" %}"></script>
+		<script src="{% static "js/script.js" %}"></script>
+		<script src="{% static "js/superfish.js" %}"></script>
+		<script src="{% static "js/jquery.ui.totop.js" %}"></script>
+		<script src="{% static "js/jquery.equalheights.js" %}"></script>
+		<script src="{% static "js/jquery.mobilemenu.js" %}"></script>
+		<script src="{% static "js/jquery.easing.1.3.js" %}"></script>
+		<!--[if (gt IE 9)|!(IE)]><!-->
+		<script src="{% static "js/jquery.mobile.customized.min.js" %}"></script>
+		<!--<![endif]-->
+		<script>
+		$(document).ready(function(){
+			$().UItoTop({ easingType: 'easeOutQuart' });
+		});
+		</script>
+	</head>
+	<body>
+<!--==============================header=================================-->
+		<header>
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="menu_block">
+						<nav class="horizontal-nav full-width horizontalNav-notprocessed">
+							<ul class="sf-menu">
+								<li><a href="/home">首页</a></li>
+								<li class="current"><a href="/album">画册</a></li>
+								<li><a href="/network">网络</a></li>
+								<li><a href="/blog">博客</a></li>
+								<li><a href="/contact">联系</a></li>
+							</ul>
+						</nav>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="grid_12">
+					<h1>
+						<a href="/home">
+							<img src="{% static "images/logo1.png" %}" alt="Your Happy Family">
+						</a>
+					</h1>
+				</div>
+			</div>
+		</header>
+<!--==============================Content=================================-->
+		<div class="content">
+			<div class="container_12">
+				<div class="banners">
+					<div class="grid_4">
+						<div class="banner">
+							<img src="{% static "images/page2_img1.jpg" %}" alt="">
+							<div class="label">
+								<div class="title">新西兰</div>
+								<div class="price">
+									<span>&nbsp;</span></div>
+								<a href="{% static "Newland.html" %}">了解</a>
+							</div>
+						</div>
+					</div>
+					<div class="grid_4">
+						<div class="banner">
+							<img src="{% static "images/page2_img2.jpg" %}" alt="">
+							<div class="label">
+								<div class="title">印度</div>
+								<div class="price">
+									<span>&nbsp;</span></div>
+								<a href="{% static "India.html" %}">了解</a>
+							</div>
+						</div>
+					</div>
+					<div class="grid_4">
+						<div class="banner">
+							<img src="{% static "images/page2_img3.jpg" %}" alt="">
+							<div class="label">
+								<div class="title">法国</div>
+								<div class="price">
+									<span>&nbsp;</span></div>
+								<a href="{% static "France.html" %}">了解</a>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="grid_4">
+						<div class="banner">
+							<img src="{% static "images/page2_img4.jpg" %}" alt="">
+							<div class="label">
+								<div class="title">加拿大</div>
+								<div class="price">
+									<span>&nbsp;</span></div>
+								<a href="{% static "Canada.html" %}">了解</a>
+							</div>
+						</div>
+					</div>
+					<div class="grid_4">
+						<div class="banner">
+							<img src="{% static "images/page2_img5.jpg" %}" alt="">
+							<div class="label">
+								<div class="title">土耳其</div>
+								<div class="price">
+									<span>&nbsp;</span></div>
+								<a href="{% static "Turkey.html" %}">了解</a>
+							</div>
+						</div>
+					</div>
+					<div class="grid_4">
+						<div class="banner">
+							<img src="{% static "images/page2_img6.jpg" %}" alt="">
+							<div class="label">
+								<div class="title">埃及</div>
+								<div class="price">
+									<span>&nbsp;</span></div>
+								<a href="{% static "Egypt.html" %}">了解</a>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="grid_4">
+						<div class="banner">
+							<img src="{% static "images/page2_img7.jpg" %}" alt="">
+							<div class="label">
+								<div class="title">日本</div>
+								<div class="price">
+									<span>&nbsp;</span></div>
+								<a href="{% static "Japan.html" %}">了解</a>
+							</div>
+						</div>
+					</div>
+					<div class="grid_4">
+						<div class="banner">
+							<img src="{% static "images/page2_img8.jpg" %}" alt="">
+							<div class="label">
+								<div class="title">巴西</div>
+								<div class="price">
+									<span>&nbsp;</span></div>
+								<a href="{% static "Brazil.html" %}">了解</a>
+							</div>
+						</div>
+					</div>
+					<div class="grid_4">
+						<div class="banner">
+							<img src="{% static "images/page2_img9.jpg" %}" alt="">
+							<div class="label">
+								<div class="title">韩国</div>
+								<div class="price">
+									<span>&nbsp;</span></div>
+								<a href="{% static "Korea.html" %}">了解</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<!--==============================footer=================================-->
+		{% include "foot.html" %}
+		<script>
+		$(function (){
+			$('#bookingForm').bookingForm({
+				ownerEmail: '#'
+			});
+		})
+		</script>
+	</body>
+</html>

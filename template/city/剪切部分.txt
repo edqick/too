@@ -1,0 +1,129 @@
+		<div class="content"><div class="ic">More Website Templates @ cssmoban.com - February 10, 2014!</div>
+			<div class="container_12">
+				<div class="grid_4">
+					<div class="banner">
+						<img src="images/ban_img1.jpg" alt="">
+						<div class="label">
+							<div class="title">巴塞罗那</div>
+							<div class="price">FROM<span>$ 1000</span></div>
+							<a href="#">了解更多</a>
+						</div>
+					</div>
+				</div>
+				<div class="grid_4">
+					<div class="banner">
+						<img src="images/ban_img2.jpg" alt="">
+						<div class="label">
+							<div class="title">GOA</div>
+							<div class="price">FROM<span>$ 1.500</span></div>
+							<a href="#">了解更多</a>
+						</div>
+					</div>
+				</div>
+				<div class="grid_4">
+					<div class="banner">
+						<img src="images/ban_img3.jpg" alt="">
+						<div class="label">
+							<div class="title">巴黎</div>
+							<div class="price">FROM<span>$ 1.600</span></div>
+							<a href="#">了解更多</a>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="grid_6">
+					<h3>预订表</h3>
+					<form id="bookingForm">
+						<div class="fl1">
+							<div class="tmInput">
+								<input name="Name" placeHolder="姓名:" type="text" data-constraints='@NotEmpty @Required @AlphaSpecial'>
+							</div>
+							<div class="tmInput">
+								<input name="Country" placeHolder="国家:" type="text" data-constraints="@NotEmpty @Required">
+							</div>
+						</div>
+						<div class="fl1">
+							<div class="tmInput">
+								<input name="Email" placeHolder="邮箱:" type="text" data-constraints="@NotEmpty @Required @Email">
+							</div>
+							<div class="tmInput mr0">
+								<input name="Hotel" placeHolder="酒店:" type="text" data-constraints="@NotEmpty @Required">
+							</div>
+						</div>
+						<div class="clear"></div>
+						<strong>入住</strong>
+						<label class="tmDatepicker">
+							<input type="text" name="Check-in" placeHolder='10/05/2014' data-constraints="@NotEmpty @Required @Date">
+						</label>
+						<div class="clear"></div>
+						<strong>退房</strong>
+						<label class="tmDatepicker">
+							<input type="text" name="Check-out" placeHolder='20/05/2014' data-constraints="@NotEmpty @Required @Date">
+						</label>
+						<div class="clear"></div>
+						<div class="tmRadio">
+							<p>舒适度</p>
+							<input name="Comfort" type="radio" id="tmRadio0" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' checked/>
+							<span>低</span>
+							<input name="Comfort" type="radio" id="tmRadio1" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
+							<span>中</span>
+							<input name="Comfort" type="radio" id="tmRadio2" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
+							<span>高</span>
+						</div>
+						<div class="clear"></div>
+						<div class="fl1 fl2">
+							<em>成人</em>
+							<select name="Adults" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+								<option>1</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+							</select>
+							<div class="clear"></div>
+							<em>客房</em>
+							<select name="Rooms" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+								<option>1</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+							</select>
+						</div>
+						<div class="fl1 fl2">
+							<em>孩子</em>
+							<select name="Children" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+								<option>0</option>
+								<option>0</option>
+								<option>1</option>
+								<option>2</option>
+							</select>
+						</div>
+						<div class="clear"></div>
+						<div class="tmTextarea">
+							<textarea name="Message" placeHolder="留言" data-constraints='@NotEmpty @Required @Length(min=20,max=999999)'></textarea>
+						</div>
+						<a href="#" class="btn" data-type="submit">提交</a>
+					</form>
+				</div>
+				<div class="grid_5 prefix_1">
+					<h3>欢迎</h3>
+					<img src="images/page1_img1.jpg" alt="" class="img_inner fleft">
+					<div class="extra_wrapper">
+						<p>欢迎光临</p>
+						谢谢惠顾
+					</div>
+					<div class="clear cl1"></div>
+					<p>你在哪里</p>
+					<p><span class="col1"><a href="http://www.cssmoban.com/category/travel-website-templates/" rel="nofollow">点击这里</a></span> 下次再来</p>
+					美好时光
+					<h4>客户报价</h4>
+					<blockquote class="bq1">
+						<img src="images/page1_img2.jpg" alt="" class="img_inner noresize fleft">
+						<div class="extra_wrapper">
+							<p>发哈 </p>
+							<div class="alright">
+								<div class="col1">QICK</div>
+								<a href="#" class="btn">更多</a>
+							</div>
+						</div>
+					</blockquote>
+				</div>
