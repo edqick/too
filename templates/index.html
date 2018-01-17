@@ -1,12 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>{% block title %}意投网{% endblock %}</title>
-		<meta charset="UTF-8">
-		<meta name="format-detection" content="telephone=no" />
-		{% block head %}
+{% block title %}首页{% endblock %}
+	{% block head %}
 		<link rel="icon" href="{% static "images/favicon.ico" %}">
 		<link rel="shortcut icon" href="{% static "images/favicon.ico" %}" />
 		<link rel="stylesheet" href="{% static "booking/css/booking.css" %}">
@@ -25,21 +20,45 @@
 		<script src="{% static "js/owl.carousel.js" %}"></script>
 		<script src="{% static "js/camera.js" %}"></script>
 		<script src="{% static "booking/js/booking.js" %}"></script>
-		{% endblock %}
-
+		<script>
+			$(document).ready(function(){
+			jQuery('#camera_wrap').camera({
+				loader: false,
+				pagination: false ,
+				minHeight: '444',
+				thumbnails: false,
+				height: '48.375%',
+				caption: true,
+				navigation: false,
+				fx: 'mosaic',
+				playPause			: false,
+				pauseOnClick		: false
+			});
+			jQuery('#camera_wrap').cameraStop();
+			});
+		</script>
 	</head>
 	<body class="page1" id="top">
+	{% endblock %}
 <!--==============================header=================================-->
-		{% include "header.html" %}
-	{% block content %}
-		<div class="caption fadeIn">
-			<h2>欢迎</h2>
-			<a href="/login">登录</a>
-		</div>
+	{% block header %}
+		<li class="current"><a href="/home">首页</a></li>
+		<li><a href="/album">画册</a></li>
+		<li><a href="/network">网络</a></li>
+		<li><a href="/blog">博客</a></li>
+		<li><a href="/contact">联系</a></li>
 	{% endblock %}
 <!--==============================Content=================================-->
-
+	{% block content %}
+		<div class="slider_wrapper">
+			<div id="camera_wrap" class="">
+				<div data-src="{% static "images/slide3.jpg" %}">
+					<div class="caption fadeIn">
+						<h2>欢迎</h2>
+					<a href="/login">登录</a>
+				</div>
+			</div>
+		</div>
+	{% endblock %}
 <!--==============================footer=================================-->
-	</body>
-</html>
 

@@ -15,15 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from . import views
-from django.contrib import admin
-from django.conf.urls import include, url
 
-app_name = 'userinfo'
+app_name = 'article'
 urlpatterns = [
-    url(r'^$', views.login,name='login'),
-    url(r'^logout/$', views.logout,name='logout'),
-    url(r'^users/$', views.users,name='users'),
-    url(r'^error/$',views.error,name="error"),
-    url(r'^create/$',views.create,name="create"),
+    url(r'^$', views.loadArticle,name='article'),
     
 ]

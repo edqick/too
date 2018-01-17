@@ -24,7 +24,6 @@
 		<script src="{% static "js/owl.carousel.js" %}"></script>
 		<script src="{% static "js/camera.js" %}"></script>
 		<script src="{% static "booking/js/booking.js" %}"></script>
-		{% endblock %}
 		<script>
 			$(document).ready(function(){
 			jQuery('#camera_wrap').camera({
@@ -43,24 +42,49 @@
 			});
 		</script>
 	</head>
-	<body class="page1" id="top">
+	<body>
+	{% endblock %}
 <!--==============================header=================================-->
-		{% include "header.html" %}
-
+	<header>
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="menu_block">
+						<nav class="horizontal-nav full-width horizontalNav-notprocessed">
+							<ul class="sf-menu">
+								{% block header %}
+								<li class="current"><a href="/home">首页</a></li>
+								<li><a href="/album">画册</a></li>
+								<li><a href="/network">网络</a></li>
+								<li><a href="/blog">博客</a></li>
+								<li><a href="/contact">联系</a></li>
+								{% endblock %}
+							</ul>
+						</nav>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="grid_12">
+					<h1>
+						<a href="/home">
+							<img src="{% static "images/logo1.png" %}" alt="Your Happy Family">
+						</a>
+					</h1>
+				</div>
+			</div>
+	</header>
+<!--==============================Content=================================-->
+	{% block content %}
 		<div class="slider_wrapper">
 			<div id="camera_wrap" class="">
 				<div data-src="{% static "images/slide3.jpg" %}">
-				{% block content %}
 					<div class="caption fadeIn">
 						<h2>伦敦</h2>
 						<a href="#">了解更多</a>
 					</div>
-				{% endblock %}
 				</div>
 			</div>
 		</div>
-<!--==============================Content=================================-->
-
+	{% endblock %}
 <!--==============================footer=================================-->
 	{% block foot %}
 		{% include "foot.html" %}

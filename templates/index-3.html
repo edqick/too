@@ -1,10 +1,7 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>博客</title>
-		<meta charset="UTF-8">
-		<meta name="format-detection" content="telephone=no" />
+{% block title %}博客{% endblock %}
+	{% block head %}
 		<link rel="icon" href="{% static "images/favicon.ico" %}">
 		<link rel="shortcut icon" href="{% static "images/favicon.ico" %}" />
 		<link rel="stylesheet" href="{% static "css/style.css" %}">
@@ -35,34 +32,18 @@
 		<![endif]-->
 	</head>
 	<body>
+	{% endblock %}
 <!--==============================header=================================-->
-		<header>
-			<div class="container_12">
-				<div class="grid_12">
-					<div class="menu_block">
-						<nav class="horizontal-nav full-width horizontalNav-notprocessed">
-							<ul class="sf-menu">
-								<li><a href="/home">首页</a></li>
-								<li><a href="/album">画册</a></li>
-								<li><a href="/network">网络</a></li>
-								<li class="current"><a href="/blog">博客</a></li>
-								<li><a href="/contact">联系</a></li>
-							</ul>
-						</nav>
-						<div class="clear"></div>
-					</div>
-				</div>
-				<div class="grid_12">
-					<h1>
-						<a href="index.html">
-							<img src="images/logo1.png" alt="Your Happy Family">
-						</a>
-					</h1>
-				</div>
-			</div>
-		</header>
+	{% block header %}
+		<li><a href="/home">首页</a></li>
+		<li><a href="/album">画册</a></li>
+		<li><a href="/network">网络</a></li>
+		<li class="current"><a href="/blog">博客</a></li>
+		<li><a href="/contact">联系</a></li>
+	{% endblock %}
 <!--==============================Content=================================-->
-		<div class="content"><div class="ic">More Website Templates @ cssmoban.com - February 10, 2014!</div>
+	{% block content %}
+		<div class="content">
 			<div class="container_12">
 				<div class="grid_7">
 					<h3>最近的帖子</h3>
@@ -70,12 +51,15 @@
 						<time datetime="2014-04-06">星期<span>日</span></time>
 						<div class="extra_wrapper">
 							<div class="text1 col1"><a href="#">大教堂</a></div>由
-							<a href="#">Admin</a>更新
+							<a href="#">{{user}}</a>更新
 						</div>
 						<div class="clear"></div>
 						<img src="{% static "images/page4_img1.jpg" %}" alt="" class="img_inner">
-						<p>关于大教堂1 </p>关于大教堂2
-						<br>
+						{% for article in articles %}
+								<p>{{article.title}}</p><br>
+								{{article.content}}<br>
+						<p>
+						{% endfor %}
 						<a href="#" class="link1">查看更多星期日的内容</a>
 					</div>
 					<div class="blog">
@@ -118,7 +102,5 @@
 				</div>
 			</div>
 		</div>
+	{% endblock %}
 <!--==============================footer=================================-->
-		{% include "foot.html" %}
-	</body>
-</html>

@@ -9,6 +9,9 @@ class Article(models.Model):
     modifytime = models.DateTimeField(auto_now = True)
     content = models.TextField()
     
+    def __str__(self):
+        return self.title
+    
 class Comments(models.Model):
     name = models.CharField(max_length = 20)
     messtime = models.DateTimeField(auto_now_add = True)

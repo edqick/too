@@ -1,8 +1,7 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>画册</title>
+{% block title %}画册{% endblock %}
+	{% block head %}
 		<meta charset="UTF-8">
 		<meta name="format-detection" content="telephone=no" />
 		<link rel="icon" href="{% static "images/favicon.ico" %}">
@@ -27,33 +26,17 @@
 		</script>
 	</head>
 	<body>
+	{% endblock %}
 <!--==============================header=================================-->
-		<header>
-			<div class="container_12">
-				<div class="grid_12">
-					<div class="menu_block">
-						<nav class="horizontal-nav full-width horizontalNav-notprocessed">
-							<ul class="sf-menu">
-								<li><a href="/home">首页</a></li>
-								<li class="current"><a href="/album">画册</a></li>
-								<li><a href="/network">网络</a></li>
-								<li><a href="/blog">博客</a></li>
-								<li><a href="/contact">联系</a></li>
-							</ul>
-						</nav>
-						<div class="clear"></div>
-					</div>
-				</div>
-				<div class="grid_12">
-					<h1>
-						<a href="/home">
-							<img src="{% static "images/logo1.png" %}" alt="Your Happy Family">
-						</a>
-					</h1>
-				</div>
-			</div>
-		</header>
+	{% block header %}
+		<li><a href="/home">首页</a></li>
+		<li class="current"><a href="/album">画册</a></li>
+		<li><a href="/network">网络</a></li>
+		<li><a href="/blog">博客</a></li>
+		<li><a href="/contact">联系</a></li>
+	{% endblock %}
 <!--==============================Content=================================-->
+	{% block content %}
 		<div class="content">
 			<div class="container_12">
 				<div class="banners">
@@ -161,14 +144,5 @@
 				</div>
 			</div>
 		</div>
+	{% endblock %}
 <!--==============================footer=================================-->
-		{% include "foot.html" %}
-		<script>
-		$(function (){
-			$('#bookingForm').bookingForm({
-				ownerEmail: '#'
-			});
-		})
-		</script>
-	</body>
-</html>
