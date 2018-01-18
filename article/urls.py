@@ -19,5 +19,6 @@ from . import views
 app_name = 'article'
 urlpatterns = [
     url(r'^$', views.loadArticle,name='article'),
+    url(r'^(?P<pid>[0-9]+)/$', views.contextArticle,name='article_pid'),
     
 ]

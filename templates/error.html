@@ -1,10 +1,7 @@
-﻿{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>{% block title %}意投网{% endblock %}</title>
-		<meta charset="UTF-8">
-		<meta name="format-detection" content="telephone=no" />{% block head %}
+﻿{% extends "base.html" %}
+{% load static %}
+{% block title %}首页{% endblock %}
+	{% block head %}
 		<link rel="icon" href="{% static "images/favicon.ico" %}">
 		<link rel="shortcut icon" href="{% static "images/favicon.ico" %}" />
 		<link rel="stylesheet" href="{% static "booking/css/booking.css" %}">
@@ -23,9 +20,26 @@
 		<script src="{% static "js/owl.carousel.js" %}"></script>
 		<script src="{% static "js/camera.js" %}"></script>
 		<script src="{% static "booking/js/booking.js" %}"></script>
-		{% endblock %}
+		<script>
+			$(document).ready(function(){
+			jQuery('#camera_wrap').camera({
+				loader: false,
+				pagination: false ,
+				minHeight: '444',
+				thumbnails: false,
+				height: '48.375%',
+				caption: true,
+				navigation: false,
+				fx: 'mosaic',
+				playPause			: false,
+				pauseOnClick		: false
+			});
+			jQuery('#camera_wrap').cameraStop();
+			});
+		</script>
 	</head>
 	<body class="page1" id="top">
+	{% endblock %}
 <!--==============================header=================================-->
 		{% include "header.html" %}
 	{% block content %}
@@ -33,7 +47,7 @@
 			<div id="camera_wrap" class="">
 				<div data-src="{% static "images/slide2.jpg" %}">
 					<div class="caption fadeIn">
-						<h2>error</h2>
+						<h2>{{error}}</h2>
 					</div>
 				</div>
 			</div>
@@ -42,9 +56,4 @@
 		{% include "home_content.html" %}
 	{% endblock %}
 <!--==============================footer=================================-->
-	{% block foot %}
-		{% include "foot.html" %}
-	{% endblock %}
-	</body>
-</html>
 

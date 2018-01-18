@@ -76,28 +76,15 @@
 					</div>
 				</div>
 				<div class="grid_3 prefix_1">
-					<h3 class="head1">热门新闻</h3>
+					<h3 class="head1">热门文章</h3>
 					<ul class="list">
-						<li><a href="#">新闻1 </a></li>
-						<li><a href="#">新闻2 </a></li>
-						<li><a href="#">新闻3 </a></li>
-						<li><a href="#">新闻4 </a></li>
-						<li><a href="#">新闻5 </a></li>
-						<li><a href="#">新闻6 </a></li>
-						<li><a href="#">新闻7 </a></li>
-						<li><a href="#">新闻8 </a></li>
-						<li><a href="#">新闻9 </a></li>
-						<li><a href="#">新闻10 </a></li>
+                        {% for article in articles %}
+						<li><a href="/blog/{{article.id}}">{{article.title}}</a></li>
+                        {% endfor %}
 					</ul>
-					<h3 class="head1">广告</h3>
+					<h3 class="head1">热门评论</h3>
 					<ul class="list">
 						<li><a href="#">广告1</a></li>
-						<li><a href="#">广告2</a></li>
-						<li><a href="#">广告3</a></li>
-						<li><a href="#">广告4</a></li>
-						<li><a href="#">广告5</a></li>
-						<li><a href="#">广告6</a></li>
-						<li><a href="#">广告7</a></li>
 					</ul>
 				</div>
 			</div>
