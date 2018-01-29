@@ -8,7 +8,7 @@
 			<div data-src="{% static "images/slide3.jpg" %}">
 				<div class="caption fadeIn">
 					<h2>欢迎</h2>
-				<form action="{% url 'userinfo:users' %}" method="post">
+				<form action="{% url 'userinfo:create' %}" method="post">
 					{% csrf_token %}
 					用户名：<input type="text" size=20 name="username" required="required"></input><br>
 					密&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" size=20 name="password" required="required"></input><br>

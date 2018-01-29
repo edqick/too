@@ -9,4 +9,4 @@ class User(models.Model):
     isadmin = models.BooleanField(default=False)
     
     def __str__(self):
-        return "[ username :" + self.username +", password : "+ str(self.password) +", signdate : "+ self.signdate +", interestnum : "+ str(self.interestnum)+" ]"
+        return self.username

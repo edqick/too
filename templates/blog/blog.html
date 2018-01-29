@@ -8,15 +8,37 @@
 				<div class="grid_7">
 					<h3>{{article.title}}</h3>
 					<div class="blog">
-						<time datetime="2014-04-06">星期<span>日</span></time>
+						<time>星期<span>日</span></time>
 						<div class="extra_wrapper">
 							<div class="text1 col1"><a>发布时间：{{article.createtime|date:"Y-m-d H:i"}}</a></div>
 							作者 ： {{user}}
 						</div>
 						<div class="clear"></div>
 						<img src="{% static "images/page4_img1.jpg" %}" alt="" class="img_inner">
-						<p>{{article.content}}</p><br>
-						<a href="#" class="link1">评论</a>
+						<p><article>{{article.content}}</article></p><br>
+						<div class="text1 col1"><a>评论区：</a></div>
+					</div>
+					<div class="comments" style="padding-top: 20px;">
+						<form action="/blog/{{article.id}}/" method="post">
+							{% csrf_token %}
+							<textarea name="review" cols="70" rows="10" placeholder="在此输入您的评论" style="resize:none"></textarea>
+							<input type="submit" value="提交">&nbsp;&nbsp;<input type="reset" value="重置">
+						</form>
+						<div class="comment" name="comment">
+							{% if comments|length > 0 %}
+							{% for comment in comments %}
+							------------------------------------------------------------------------
+							<br>
+							第{{comment.id}}楼：{{comment.name}}&nbsp;在{{comment.messtime}}&nbsp;说道：
+							<p>
+							<p>{{comment.content}}</p>
+							------------------------------------------------------------------------
+							<br>
+							{% endfor %}
+							{% else %}
+							暂时没有评论！
+							{% endif%}
+						</div>
 					</div>
 				</div>
 				<div class="grid_3 prefix_1">
