@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+{% load static %}
+<!--==============================header=================================-->
+<!--==============================Content=================================-->
+	{% block content %}
+	<div class="slider_wrapper">
+		<div id="camera_wrap" class="">
+			<div data-src="{% static "images/slide3.jpg" %}">
+				<div class="caption fadeIn">
+					<h2>欢迎</h2>
+				<form action="{% url 'userinfo:create' %}" method="post">
+					{% csrf_token %}
+					用户名：<input type="text" size=20 name="username" required="required"></input><br>
+					密&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" size=20 name="password" required="required"></input><br>
+					<input type="submit" value="登录">
+					<input type="reset" value="重置">
+					<a href="#">登录</a>
+					<a href="#">取消</a>
+				</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endblock %}
+<!--==============================footer=================================-->

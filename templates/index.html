@@ -4,7 +4,10 @@
 	{% block head %}
 		<link rel="icon" href="{% static "images/favicon.ico" %}">
 		<link rel="shortcut icon" href="{% static "images/favicon.ico" %}" />
-		<link rel="stylesheet" href="{% static "booking/css/booking.css" %}">
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    	<link rel="stylesheet" href="{% static "booking/css/booking.css" %}">
 		<link rel="stylesheet" href="{% static "css/camera.css" %}">
 		<link rel="stylesheet" href="{% static "css/owl.carousel.css" %}">
 		<link rel="stylesheet" href="{% static "css/style.css" %}">
@@ -36,6 +39,13 @@
 			});
 			jQuery('#camera_wrap').cameraStop();
 			});
+			$(function () {
+				$('#myModal').modal({
+					backdrop:'static'
+
+				});
+			});
+
 		</script>
 	</head>
 	<body class="page1" id="top">
@@ -55,10 +65,63 @@
 				<div data-src="{% static "images/slide3.jpg" %}">
 					<div class="caption fadeIn">
 						<h2>欢迎</h2>
-					<a href="/login">登录</a>
+					<a data-toggle="modal" data-target="#myModal">登录</a>
 				</div>
 			</div>
 		</div>
+<!-- 登录框 -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h2 class="modal-title" id="myModalLabel" align="center">登录</h2>
+            </div>
+            <div class="modal-body">
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label for="firstname" class="col-sm-2 control-label">名字</label>
+							<div class="col-sm-10">
+							<input type="text" class="form-control" id="firstname"
+				   				placeholder="请输入名字">
+							</div>
+					</div>
+					<div class="form-group">
+						<label for="lastname" class="col-sm-2 control-label">姓</label>
+							<div class="col-sm-10">
+							<input type="text" class="form-control" id="lastname"
+				   				placeholder="请输入姓">
+							</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<div class="checkbox">
+								<label>
+									<input type="checkbox"> 请记住我
+								</label>
+							</div>
+						</div>
+					</div>
+
+				</form>
+
+			</div>
+            <div class="modal-footer">
+				<div class="submit">
+
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">登录</button>
+				</div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
 	{% endblock %}
 <!--==============================footer=================================-->
+	{% block footer %}
+		{{block.super}}
+	<script>
 
+	</script>
+	{% endblock %}

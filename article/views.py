@@ -3,6 +3,7 @@ from django.http import request
 from .models import Article,Comments
 from userinfo.models import User
 import traceback
+from django.urls.base import reverse
 # Create your views here.
 def loadArticle(request):
     articles = Article.objects.all()
@@ -19,7 +20,7 @@ def contextArticle(request,pid):
         user = User.objects.get(username=article[0].auth)
         Comments.objects.create(name=user,content=review,article=article[0])
     
-    comments = Comments.objects.filter(article=article[0])
+    comments = Comments.objects.filter(article=article[0])[::-1]
     context = {'article':article[0],'articles':articles,'comments':comments}
     return render(request, 'blog/blog.html', context)
         
